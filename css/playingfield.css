@@ -1,0 +1,119 @@
+* { 
+  margin: 0;
+  padding: 0;
+}
+body,html{
+  height: 100%;
+  overflow: hidden;
+}
+footer, section, header, aside, figure {
+  display: block;
+}
+li {
+  list-style: none;
+}
+#container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.playing #container { 
+  cursor: none;
+}
+
+@media screen and (min-device-width: 700px) {
+  #container {
+    max-width: 395px;
+    height: 80%;
+    margin: 0 auto;
+        top: 20px;
+  }
+}
+#playfield, #gameover, #instructions, #intro {
+  position: absolute;
+  top: -900px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: top 1s;
+  -moz-transition: top 1s;
+  -ms-transition: top 1s;
+  -o-transition: top 1s;
+  transition: top 1s;
+}
+#playfield.current, 
+#gameover.current, 
+#instructions.current, 
+#intro.current {
+  top: 0;
+  -webkit-transition: top 1s;
+  -moz-transition: top 1s;
+  -ms-transition: top 1s;
+  -o-transition: top 1s;
+  transition: top 1s;
+}
+#characters li.introdeck {
+  opacity: 0;
+  left: -9000px;
+  position: absolute;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+#characters .current, #characters .introdeck {
+  width: 80%;
+  margin: 5px auto;
+}
+#characters .current ul {
+  margin: 5px 0;
+}
+#characters .current li {
+  display: inline;
+  padding-right: 10px;
+}
+#characters li.current {
+  opacity: 1;
+  left: 0;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+
+.right {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+}
+.left {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+}
+#scoresinfo {
+  position: absolute;
+  width: 100%;
+  padding: 5px 0;
+  background-color: #030724;
+}
+#energy, #score {
+  position: relative;
+  color: #fff;
+  padding-left: 20px;
+}
+#energy output, #score output {
+  position: absolute;
+  right: 20px;
+}

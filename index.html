@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Chicken Escape Game | Javasript</title>
+  <meta type="description" content="Chicken Escape Game | Javasript. You can use the keyboard to move left and right">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> 
+  <link href="http://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/playingfield.css" type="text/css">
+  <link rel="stylesheet" href="css/textstyles.css" type="text/css">
+</head>
+<body data-gr-c-s-loaded="true">
+  <header><h1></h1></header>
+  <div id="container" tabindex="-1">
+
+  <section id="intro" class="current">
+      <h1><span></span>Chicken escape</h1>
+      <p>Let's Start The Game.</p>
+      <ul>
+        <li>Last score: <output>00</output></li>
+        <li>High score: <output>00</output></li>
+        <li><button id="playbutton">Play</button></li>
+      </ul>
+  </section>
+
+  <section id="instructions">
+    <ul id="characters" data-countstart="2" data-newsprite="500">
+      <li class="introdeck">
+        <h2>User Section</h2>
+        <img src="img/user.png" width="72" height="100" id="player" data-increase="5">
+      </li>
+
+      <li class="introdeck">
+        <p>Each are worth 10,20,30,40,50 energy points that you can win or lose.</p>
+        <ul>
+          <li><img src="img/Chicken.png" class="sprite" alt="Chicken" data-collision="energy:20" data-type="good"></li>
+          <li><img src="img/Chicken.png" class="sprite" alt="Chicken" data-collision="energy:40" data-type="good"></li>
+          <li><img src="img/Chicken.png" class="sprite" alt="Chicken" data-collision="energy:80" data-type="good"></li>
+
+        </ul>
+      </li>
+
+    </ul>
+  </section>
+
+  <section id="playfield">
+    <div id="scoresinfo">
+    <div id="energy">Energy <output>100</output></div>
+    <div id="score">Score <output></output></div>
+    </div>
+    <canvas></canvas>
+  </section>
+
+  <section id="gameover">
+    <header><h1>Game over!</h1></header>
+    <p>Your score: <output></output></p>
+    <p class="message" data-highscore="New highscore!"></p>
+    <p><button id="replay">Play again</button></p>
+  </section>
+
+  <ul id="androidbrowsersucks">
+    <li><button class="left">&nbsp;</button></li>
+    <li><button class="right">&nbsp;</button></li>
+  </ul>
+</div>
+<footer>
+</footer>
+<script src="js/app.js"></script>
+
+</body></html>
